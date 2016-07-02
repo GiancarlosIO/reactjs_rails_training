@@ -13,27 +13,7 @@ var Records = React.createClass ({
         <h2 className="title" >
           Records
         </h2>
-        <table className= "table table-bordered" >
-          <thead>
-            <tr>
-              <td>Date</td>
-              <td>Title</td>
-              <td>Amount</td>
-            </tr>
-          </thead>
-          <tbody>
-            { this.props.data.map(function(record, i){
-              return (
-                <tr key={ i }>
-                  <td> { record.date } </td>
-                  <td> { record.title } </td>
-                  <td> { record.amount.toString() } </td>
-                </tr>
-              );
-            })
-          }
-          </tbody>
-        </table>
+        <Record records = {this.state.records} />
       </div>
     );
   }
